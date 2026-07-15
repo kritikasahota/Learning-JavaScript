@@ -56,7 +56,7 @@ console.log(marvelHeroes.slice(1,3));
 //SPLICE METHOD
 //======================
 let arr4 = [1, 2, 3, 4, 5, 6, 7];
-arr4.splice(2, 2, 101, 102);
+arr4.splice(2, 2, 101, 102);  // splice(startIndex, deleteCount, item1, item2, ...)
 //arr4.splice(2,0,101); //add
 //arr4.splice(2,1);   // delete
 //arr4.splice(2,3,104);  // replace
@@ -105,6 +105,7 @@ console.log(numbers);
 // Default sorting is alphabetical.
 // (a, b) => a - b → Ascending order.
 // (a, b) => b - a → Descending order.
+
 //TASK 1
 let companies = ["Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"];
 //console.log(companies);
