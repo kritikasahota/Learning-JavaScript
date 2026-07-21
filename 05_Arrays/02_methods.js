@@ -1,119 +1,121 @@
 //=========================
-//pop operation
+// POP OPERATION
 //=========================
+// pop() removes the last element from an arra and returns the removed element.
 let fruits = ["Apple", "Orange", "Pear"];
-console.log( fruits.pop() ); //removes element from end 
-console.log( fruits ); 
+console.log(fruits.pop());
+console.log(fruits);
 
 //==========================
-//push operation
+// PUSH OPERATION
 //==========================
+// push() adds one or more elements to the end of an array and returns the new length.
 fruits = ["Apple", "Orange"];
-fruits.push("Pear"); //adds an element to end
-console.log( fruits ); 
+fruits.push("Pear");
+console.log(fruits);
 
 //========================
-//shift operation
+// SHIFT OPERATION
 //========================
+// shift() removes the first element from an array and returns the removed element.
 fruits = ["Apple", "Orange", "Pear"];
-console.log( fruits.shift() ); // remove element from front
-console.log( fruits ); 
+console.log(fruits.shift());
+console.log(fruits);
 
 //=========================
-//unshift operation
+// UNSHIFT OPERATION
 //=========================
+// unshift() adds one or more elements to the beginning of an array.
 fruits = ["Orange", "Pear"];
-fruits.unshift('Apple'); // adds element in front
-console.log( fruits ); 
+fruits.unshift("Apple");
+console.log(fruits);
 
 //========================
-//indexOf Method
+// indexOf() METHOD
 //========================
+// indexOf() returns the index of the first occurrence of an element. Returns -1 if not found.
 let colors = ["red", "yellow", "blue"];
 console.log(colors.indexOf("yellow"));
 console.log(colors.indexOf("green"));
 
 //===================
-//includes
+// includes()
 //===================
+// includes() checks whether an element exists in the array and returns true or false.
 console.log(colors.includes("red"));
 console.log(colors.includes("green"));
 
 //===================
-//toString 
+// toString()
 //===================
-let arr3 = [1, 2, 3]; 
-console.log( arr3 ); // 1,2,3
-console.log( String(arr3) ); 
+// toString() converts an array into a comma-separated string.
+let arr3 = [1, 2, 3];
+console.log(arr3);
+console.log(String(arr3));
 
 //=======================
-//SLICE METHOD
+// SLICE METHOD
 //=======================
-let marvelHeroes = [ "thor", "spiderman", "ironman", "antman", "Dr.Strange"];
-console.log(marvelHeroes.slice(1,3));
+// slice(start, end) returns a portion of an array.
+// It does NOT change the original array.
+let marvelHeroes = ["thor", "spiderman", "ironman", "antman", "Dr.Strange"];
+console.log(marvelHeroes.slice(1, 3));
 
 //======================
-//SPLICE METHOD
+// SPLICE METHOD
 //======================
+// splice() adds, removes, or replaces elements.
+// It changes the original array.
 let arr4 = [1, 2, 3, 4, 5, 6, 7];
-arr4.splice(2, 2, 101, 102);  // splice(startIndex, deleteCount, item1, item2, ...)
-//arr4.splice(2,0,101); //add
-//arr4.splice(2,1);   // delete
-//arr4.splice(2,3,104);  // replace
-console.log(arr4); 
+arr4.splice(2, 2, 101, 102);
+//arr4.splice(2,0,101); // Add
+//arr4.splice(2,1);     // Delete
+//arr4.splice(2,3,104); // Replace
+console.log(arr4);
 
 //======================
-//CONCATENATION
+// CONCATENATION
 //=======================
+// concat() joins two or more arrays and returns a new array.
 let arr5 = [1, 2];
-console.log( arr5.concat([3, 4]) ); // create an array from: arr5 and [3,4]
-console.log( arr5.concat([3, 4], [5, 6]) ); // create an array from: arr5 and [3,4] and [5,6]
-console.log( arr5.concat([3, 4], 5, 6) ); // create an array from: arr5 and [3,4], then add values 5 and 6
+console.log(arr5.concat([3, 4]));
+console.log(arr5.concat([3, 4], [5, 6]));
+console.log(arr5.concat([3, 4], 5, 6));
 
 //================
-//REVERSE
+// REVERSE
 //================
-console.log(colors.reverse);
+// reverse() reverses the order of elements in the original array.
+console.log(colors.reverse());
 
-// ===========================
-// sort() Method
-// ===========================
+//==========================
+// sort() METHOD
+//==========================
+// sort() sorts the elements of an array.
+// By default, sorting is alphabetical.
+// It changes the original array.
 
-// sort() is used to sort the elements of an array. It modifies (changes) the original array. 
-// By default, it sorts elements alphabetically (as strings).
-// array.sort(compareFunction);
-
-// 1. Sorting Strings
 let fruits = ["Banana", "Apple", "Mango"];
 fruits.sort();
 console.log(fruits);
 
-// 2. Sorting Numbers (Wrong Way)
+// Sorting Numbers (Wrong Way)
 let numbers = [100, 25, 5, 10];
 numbers.sort();
 console.log(numbers);
 
-// 3. Ascending Order
+// Ascending Order
 numbers.sort((a, b) => a - b);
 console.log(numbers);
 
-// 4. Descending Order
+// Descending Order
 numbers.sort((a, b) => b - a);
 console.log(numbers);
 
-// sort() changes the original array.
-// Default sorting is alphabetical.
-// (a, b) => a - b → Ascending order.
-// (a, b) => b - a → Descending order.
-
-//TASK 1
+//=====================
+// TASK 1
+//=====================
 let companies = ["Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"];
-//console.log(companies);
-//console.log(companies.shift());
-
-//companies.splice(2,1,"Ola");
-//companies[2]="Ola";
-//console.log(companies);
 
 companies.push("Amazon");
 console.log(companies);
@@ -121,30 +123,105 @@ console.log(companies);
 //======================
 // MAP
 //======================
+// map() creates a new array by applying a function to every element of the original array.
 let nums = [67, 52, 39];
+
 nums.map((val) => {
-    console.log(val);
+  console.log(val);
 });
 
 let newArr = nums.map((val) => {
-    return val * val;
+  return val * val;
 });
 console.log(newArr);
 
 //================
 // FILTER
 //================
+// filter() creates a new array containing only the elements that satisfy a condition.
 let nums_ = [1, 2, 3, 4, 5, 6, 7];
+
 let evenArr = nums_.filter((val) => {
-    return val % 2 == 0;
+  return val % 2 == 0;
 });
 console.log(evenArr);
 
 //=====================
 // REDUCE
 //=====================
+// reduce() reduces an array to a single value by applying a callback function.
 let num_1 = [1, 2, 3, 4];
+
 const output = num_1.reduce((res, curr) => {
-    return res + curr;
+  return res + curr;
 });
-console.log( output);
+
+console.log(output);
+
+// ==========================================
+// every() METHOD
+// ==========================================
+
+// every() checks whether ALL elements satisfy a given condition.
+// It returns true or false.
+
+// Syntax:
+// array.every((element) => condition);
+
+// ==========================================
+// EXAMPLE 1: Check Positive Numbers
+// ==========================================
+
+let numbers = [2, 4, 6, 8];
+
+let result = numbers.every((num) => {
+  return num % 2 === 0;
+});
+
+console.log(result); // true
+
+// ==========================================
+// EXAMPLE 2: Condition Fails
+// ==========================================
+
+numbers = [2, 4, 5, 8];
+
+result = numbers.every((num) => {
+  return num % 2 === 0;
+});
+
+console.log(result); // false
+
+// ==========================================
+// SOME() METHOD
+// ==========================================
+
+// some() checks whether AT LEAST ONE element satisfies a given condition.
+// It returns true or false.
+
+// Syntax:
+// array.some((element) => condition);
+
+// ==========================================
+// EXAMPLE 1: One Element Matches
+// ==========================================
+
+numbers = [1, 3, 5, 8];
+
+result = numbers.some((num) => {
+  return num % 2 === 0;
+});
+
+console.log(result); // true
+
+// ==========================================
+// EXAMPLE 2: No Element Matches
+// ==========================================
+
+numbers = [1, 3, 5, 7];
+
+result = numbers.some((num) => {
+  return num % 2 === 0;
+});
+
+console.log(result); // false
